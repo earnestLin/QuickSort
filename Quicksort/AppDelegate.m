@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "MedianSearch.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +18,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // 无序数组查找中位数
+    int list[9] = {12,3,10,8,6,9,7,11,13};
+    
+    int median = searchMedian(list, 9);
+    printf("中位数为 %d \n", median);
+    
     return YES;
 }
 
